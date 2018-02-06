@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+
+
+body {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    color:black;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    overflow: scroll;
+    height: 100%;
+    background-position: center;
+}
+
+.header {
+    font-size: 65px;
+    text-align: center;
+}
+
+.section {
+    width:950px;
+    height: 300px;
+    border: 10px solid;
+    position: relative;
+    background:  #cfe3f5;
+}
+
+#game {
+    display: block;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.corner{
+    width:15px;
+    position:absolute;
+    z-index: 9;
+}
+
+.tl {
+    top: -10px;
+    left: -10px;
+}
+.tr {
+    top: -10px;
+    right: -10px;
+}
+.bl {
+    bottom: -10px;
+    left: -10px;
+}
+.br {
+    bottom: -10px;
+    right: -10px;
+}
+
+.corner .a{
+    width: 5px;
+    height: 10px;
+    float: left;
+    display: block;
+    background: #2a6dc8;
+}
+
+.corner .b{
+    width: 5px;
+    height: 5px;
+    float: left;
+    display: block;
+    background: #2a6dc8;
+}
+
+.corner .c{
+    width: 10px;
+    height: 10px;
+    float: left;
+    display: block;
+    background: black;
+}
+
+.tr .a, .tr .b,
+.tr .c, .br .a,
+.br .b, .br .c{
+    float: right;
+}
+.bl .a,
+.br .a{
+    border-top: 5px solid black;
+}
+
+#heartpng {
+    width: 30px;
+    height: 30px;
+}
+
+.guesses {
+    overflow: hidden;
+    position: absolute;
+    float: left;
+    height: 50px;
+    width: 200px;
+    word-wrap: break-word;
+}
+
+#windiv {
+    margin-top: 15px; 
+}
+
+#lossdiv {
+    margin-top: 20px;
+}
