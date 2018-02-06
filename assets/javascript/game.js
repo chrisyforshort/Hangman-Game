@@ -18,6 +18,9 @@ var hearts = 6;
 var underScores = [];
 var wrongletter = [];
 var userGuesses = [];
+var letters = [];
+
+
 
 // $(document).ready(function(){
 // Computer to make a choice
@@ -26,6 +29,8 @@ var computerChoice = words[Math.floor(Math.random()*words.length)];
 
 console.log(computerChoice);
 
+letters.push(computerChoice.split(""))
+console.log(letters)
 
 // // Create Underscore based on length of word
 var docunderscores = document.getElementsByClassName('underscores');
@@ -38,8 +43,9 @@ var generateUnderscore = () => {
     }
     // return underScore;
 }
+generateUnderscore()
 
-console.log(generateUnderscore());
+
 
 // // <!-- I need the User to Make a Choice
 var docwrongletter = document.getElementsByClassName('guesses');
@@ -49,11 +55,17 @@ document.addEventListener('keypress', (event) => {
 // if user guess is right
     if(computerChoice.indexOf(keyword)> -1) {
         console.log(true);
-        underScores[computerChoice.indexOf(keyword)] = keyword;
-        docunderscores[0].innerHTML = underScores.join(' ');
-        if (keyword.indexOf(keyword[computerChoice]) !== keyword.lastIndexOf(keyword[computerChoice])){
-            return false;
+        console.log(keyword)
+        for (var i=0; i< letters.length; i++) {
+            if (letters[i] == keyword) {
+                underScores[i] = keyword;
+            }
         }
+        docunderscores.innerHTML = underScores.join(' ');
+        console.log(docunderscores);
+        // if (keyword.indexOf(keyword[computerChoice]) !== keyword.lastIndexOf(keyword[computerChoice])){
+        //     return false;
+        // }
         if(underScores.join('') == computerChoice) {
             winCounter++;
             document.getElementById("winCounter").innerHTML = winCounter ;
