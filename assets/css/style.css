@@ -38,6 +38,7 @@ p {
     border: 10px solid;
     position: relative;
     background:  #cfe3f5;
+    left: 7%;
 }
 
 #game {
@@ -123,4 +124,16 @@ p {
 
 #lossdiv {
     margin-top: 20px;
+}
+
+#newWord {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#gameLogo {
+    margin: 20px;
+    width: 400px;
+    height: 150px;
 }
