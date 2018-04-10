@@ -36,7 +36,6 @@ $(document).ready(function(){
     }
 
     function generateWord() {
-        $("#instruction").html("Press any key to get started!")
         objectChoice = words[Math.floor(Math.random()*words.length)];
         computerChoice = objectChoice.name
         console.log(computerChoice);
@@ -81,6 +80,7 @@ $(document).ready(function(){
                 losses ++;
                 $("#lossCounter").html(losses)
                 $("#instruction").html('<button id="newWord" type="button">Click Me for a New Word</button>')
+                $("#picture").html('<p>The answer was ' + computerChoice + '!</p><img id="gameLogo" src=' + objectChoice.picture + '>')
             }
         }
     });
@@ -95,6 +95,7 @@ $(document).ready(function(){
        underScores = []
        currentWordDiv.empty()
        $("#guesses").empty()
+       $("#picture").empty()
        startGame()
     }
 
